@@ -5,9 +5,9 @@ function phase = arr_phase_shift(freq,dist,angle)
 %              - dist: antenna element seperation distance [mm]
 %              - angle: desired beam scan angle [deg]
 %   Output:    - phase: phase shift between elements [deg]
+%   Requirement: - Phased Array Toolbox (physconst)
 
     lambda = physconst('LightSpeed')/(freq*1E3);
     phase = 360*sind(angle)*dist/lambda;
 
 end
-
